@@ -28,10 +28,10 @@
 <script type="text/javascript">
     $(document).ready(function() {
         $("#billingAddress").click(function() {
-            if ($("#billingAddress").attr("checked")=="checked") {
+            if ($("#billingAddress").attr("checked")==="checked") {
                 $(".baddr").val("");
                 $(".baddr").attr("disabled", "disabled");
-            } else if ($("#billingAddress").attr("checked")==undefined) {
+            } else if ($("#billingAddress").attr("checked")===undefined) {
                 $(".baddr").removeAttr("disabled");
             }
         });
