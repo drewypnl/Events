@@ -28,11 +28,17 @@
 <script type="text/javascript">
     $(document).ready(function() {
         $("#billingAddress").click(function() {
+
             if ($("#billingAddress").attr("checked")==="checked") {
+
+                alert("It's checked");
                 $(".baddr").val("");
                 $(".baddr").attr("disabled", "disabled");
-            } else if ($("#billingAddress").attr("checked")===undefined) {
-                $(".baddr").removeAttr("disabled");
+
+            } else {
+                if ($("#billingAddress").attr("checked") === undefined) {
+                    $(".baddr").removeAttr("disabled");
+                }
             }
         });
     });
