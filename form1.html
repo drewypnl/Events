@@ -48,8 +48,11 @@
 <script type="text/javascript">
     $(document).ready(function() {
         $("form").submit(function() {
-            alert("You submitted the form");
-            return false;
+            if ($("#username").val()=="") {
+                alert("Name can't be blank");
+                event.preventDefault();
+                return false;
+            }
         });
     });
 </script>
