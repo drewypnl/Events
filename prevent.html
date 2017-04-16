@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Prevent</title>
+    <script type="text/javascript"
+            src="jquery-3.2.1.js">
+    </script>
+</head>
+<body>
+<h1>Shipping Info</h1>
+<hr>
+<form action="#">
+    Billing Address same as Shipping Address:
+    <input type="checkbox" name="billingAddress"
+        id="billingAddress">
+    <br />
+    <br />
+    Street Address
+    <input class="baddr" type="text" name="street"
+        id="street">
+    <br />
+    <br />
+    City:
+    <input class="baddr" type="text" name="city"
+        id="city">
+</form>
+<script type="text/javascript">
+    $(document).ready(function() {
+        $("#billingAddress").click(function() {
+            if ($("#billingAddress").attr("checked")=="checked") {
+                $(".baddr").val("");
+                $(".baddr").attr("disabled", "disabled");
+            } else if ($("#billingAddress").attr("checked")==undefined) {
+                $(".baddr").removeAttr("disabled");
+            }
+        });
+    });
+</script>
+</body>
+</html>
