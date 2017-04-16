@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Keyup</title>
+    <script type="text/javascript"
+            src="jquery-3.2.1.js">
+    </script>
+</head>
+<body>
+<h1>Keyup</h1>
+<hr>
+<form action="#">
+    <textarea rows="10" cols="20" id="message" name="message">
+    </textarea>
+    <p>Characters remaining: <span id="remaining">50</span></p>
+</form>
+<script type="text/javascript">
+    $(document).ready(function() {
+        var maxCharacters = 50;
+        $("#message").on("keydown",function() {
+            var currentVal=$("#message").val().length;
+            var totalRemaining = maxCharacters - currentVal;
+            $("#remaining").text(totalRemaining);
+        });
+    });
+</script>
+</body>
+</html>
