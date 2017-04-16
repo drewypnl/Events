@@ -45,5 +45,13 @@
         </div>
     </fieldset>
 </form>
+<script type="text/javascript">
+    $(document).ready(function() {
+        $("form").submit(function() {
+            alert("You submitted the form");
+            return false;
+        });
+    });
+</script>
 </body>
 </html>
